@@ -10,7 +10,7 @@ import (
 
 	"github.com/bwmarrin/discordgo"
 	"github.com/joho/godotenv"
-	discord "github.com/lilAmper/sweet-go/src"
+	bot "github.com/lilAmper/sweet-go/src"
 )
 
 const Version = "v0.0.0-alpha"
@@ -44,7 +44,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	Session.AddHandler(discord.MessageEvent)
+	Session.AddHandler(bot.MessageEvent)
 
 	log.Printf(`Sweet-GO çalıştırıldı. CTRL + C ile kapatabilirsin.`)
 	sc := make(chan os.Signal, 1)
