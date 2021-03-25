@@ -10,7 +10,7 @@ import (
 
 	"github.com/bwmarrin/discordgo"
 	"github.com/joho/godotenv"
-	"github.com/lilAmper/sweet-go/discord"
+	discord "github.com/lilAmper/sweet-go/src"
 )
 
 const Version = "v0.0.0-alpha"
