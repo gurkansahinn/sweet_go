@@ -24,7 +24,7 @@ func main() {
 
 	Session.Token = "Bot " + os.Getenv("TOKEN")
 
-	fmt.Printf(`Sweet-GO%-16s`+"\n\n", Version)
+	fmt.Printf(`Sweet-GO %-16s`+"\n\n", Version)
 
 	err = Session.Open()
 	if err != nil {
