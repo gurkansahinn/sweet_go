@@ -1,7 +1,6 @@
 package bot
 
 import (
-	"log"
 	"math/rand"
 	"strings"
 	"time"
@@ -35,7 +34,6 @@ func MessageEvent(s *discordgo.Session, m *discordgo.MessageCreate) {
 		rand.Seed(time.Now().Unix())
 
 		message := messages[rand.Intn(len(messages))]
-		log.Print(s.Channel(m.ChannelID))
 		s.ChannelMessageSend(m.ChannelID, message)
 	}
 	return
