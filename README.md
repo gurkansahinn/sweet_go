@@ -3,5 +3,5 @@
 
 # Örnek .env
 ```
-TOKEN="discord-token"
+TOKEN="dc-token"
 ```
