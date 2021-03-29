@@ -1,6 +1,7 @@
 package bot
 
 import (
+	"log"
 	"strings"
 	"time"
 
@@ -13,6 +14,8 @@ func MessageEvent(s *discordgo.Session, m *discordgo.MessageCreate) {
 		message.SweetMessage(s, m)
 	} else if strings.ToLower(m.Content) == "!d bump" {
 		DbumpMessage(s, m)
+	} else if string(m.Content[0]) == "!wiki" {
+		log.Print("COMMAND HANDLER")
 	}
 }
 

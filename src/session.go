@@ -22,8 +22,7 @@ func StartSession() {
 
 	err := Session.Open()
 	if err != nil {
-		log.Printf("Discord ile bağlantı kurulamadı, %s\n", err)
-		os.Exit(1)
+		log.Fatalf("Discord ile bağlantı kurulamadı, %s\n", err)
 	}
 
 	Session.AddHandler(MessageEvent)
