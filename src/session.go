@@ -27,5 +27,5 @@ func StartSession() {
 
 	Session.AddHandler(MessageEvent)
 
-	DBumpTimeout = time.AfterFunc(121*time.Second, BumpNotify)
+	DBumpTimeout = time.AfterFunc(121*time.Second*1000, BumpNotify)
 }
