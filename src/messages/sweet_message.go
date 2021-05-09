@@ -2,9 +2,12 @@ package message
 
 import (
 	"math/rand"
+	"sort"
+	"strings"
 	"time"
 
 	"github.com/bwmarrin/discordgo"
+	closestmatch "github.com/schollz/closestmatch"
 )
 
 var messages = []string{
@@ -29,6 +32,15 @@ var messages = []string{
 }
 
 func SweetMessage(s *discordgo.Session, m *discordgo.MessageCreate) {
+	bag := []int{len(messages)}
+	cm := closestmatch.New(messages, bag)
+	match := cm.Closest(strings.ToLower(m.Content))
+
+	if sort.SearchStrings(messages, match) != 0 {
+		s.ChannelMessageSend(m.ChannelID, "<#786000773497749524>, sözlerimi tekrarlama göt!")
+		return
+	}
+
 	rand.Seed(time.Now().Unix())
 
 	message := messages[rand.Intn(len(messages))]

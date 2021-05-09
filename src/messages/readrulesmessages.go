@@ -1,8 +1,7 @@
 package message
 
 var ReadRulesMessages = []string{
-	`satılır`,
-	`alınır`,
-	`github hesabı satan var mı`,
-	`satıyorum`,
+	`github hesabı satan`,
+	`satmak`,
+	"ödevim var",
 }
