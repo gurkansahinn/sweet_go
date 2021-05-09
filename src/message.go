@@ -39,5 +39,5 @@ func MessageEvent(s *discordgo.Session, m *discordgo.MessageCreate) {
 func DbumpMessage(s *discordgo.Session, m *discordgo.MessageCreate) {
 	defer DBumpTimeout.Stop()
 
-	DBumpTimeout = time.AfterFunc(120*time.Second, BumpNotify)
+	DBumpTimeout = time.AfterFunc(121*time.Second*1000, BumpNotify)
 }
